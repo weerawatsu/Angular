@@ -1,0 +1,32 @@
+<div style="margin-top: 5%;">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    <div>
+      <input formControlName="id" (keyup)="submit()" />
+    </div>
+    <div style="margin-top: 20px;">
+        <app-child (movieData)="GetMovieData($event)" [movieId]="movieId"></app-child>
+    </div>
+</form>
+</div>
+
+<div style="margin-top: 2%;">
+    <table>
+        <thead>
+          <tr>
+            <th>NameMovie</th>
+            <th>TypeMovie</th>
+            <th>MoviePrice</th>
+            <th>Movieid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ MovieName }}</td>
+            <td>{{ MovieType }}</td>
+            <td>{{ MoviePrice }}</td>
+            <td>{{ Movieid }}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>
